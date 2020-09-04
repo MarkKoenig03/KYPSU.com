@@ -43,3 +43,16 @@ def about(request):
             'year':datetime.now().year,
         }
     )
+
+def uniformSecurity(request):
+    """Renders the Uniform Security page."""
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'app/uniformsecurity.html',
+        {
+            'title':'About',
+            'message':'Your application description page.',
+            'year':datetime.now().year,
+        }
+    )
